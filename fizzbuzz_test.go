@@ -10,3 +10,11 @@ func TestFizzBuzz(t *testing.T) {
 	}
 
 }
+func TestInput2ShouldReturn2(t *testing.T) {
+	want := "2"
+	got := FizzBuzz(2)
+	if got != want {
+		t.Errorf("FizzBuzz(2) = %q want %q", got, want)
+	}
+
+}
