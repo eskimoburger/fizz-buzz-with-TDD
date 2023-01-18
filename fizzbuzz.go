@@ -3,11 +3,25 @@ package fizzbuzz
 import "fmt"
 
 func FizzBuzz(number int) string {
-	if number == 5 {
+	if isFizzBuzz(number) {
+		return "FizzBuzz"
+	}
+	if isBuzz(number) {
 		return "Buzz"
 	}
-	if number == 3 || number == 6 {
+	if isFizz(number) {
 		return "Fizz"
 	}
 	return fmt.Sprintf("%d", number)
+
+}
+
+func isFizz(num int) bool {
+	return num%3 == 0
+}
+func isBuzz(num int) bool {
+	return num%5 == 0
+}
+func isFizzBuzz(num int) bool {
+	return num%15 == 0
 }
